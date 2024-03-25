@@ -14,6 +14,6 @@ interface Dao {
     @Delete
     suspend fun deleteItem(nameEntity: NameEntity)
     @Query("SELECT * FROM  name_table")
-    suspend fun getAllItems(): Flow<List<NameEntity>>
+    fun getAllItems(): Flow<List<NameEntity>>
 
 }
